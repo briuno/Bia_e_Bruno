@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+:root {
+    --primary-color: #331fa6;
+    --secondary-color: white;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #f9f9f9, #e8e8e8);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-family: 'Dancing Script', cursive;  /* Adicionado esta linha */
+    font-size: 65px;
+    margin: 0px;
+}
+
+nav a {
+    margin: 0 15px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: var(--secondary-color);
+    transition: all 0.4s;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+section {
+    padding: 25px 0;
+    text-align: center;
+}
+section h1{
+    font-size: 30px;
+}
+
+#story .content {
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+#photos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.photo {
+    width: 200px;
+    height: auto;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s;
+}
+
+.photo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+h1,h2{
+    font-family: 'Playfair Display', serif;
+}
+
+
+.heart {
+    position: relative;
+    width: 200px;
+    height: 180px;
+    margin: 0 auto 20px;
+    transition: all 0.4s;
+}
+
+.heart:hover {
+    transform: scale(1.1);
+}
+
+.heart::before, .heart::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 104px;
+    height: 200px;
+    border-radius: 100px 100px 0 0;
+    background: var(--primary-color);
+    transition: all 0.4s;
+}
+
+.heart::before {
+    left: 100px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
