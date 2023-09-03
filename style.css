@@ -104,10 +104,10 @@ h2 {
 }
 
 #Futuros {
-    border: 1px solid black; /* Isso adiciona uma borda preta de 2px */
-    padding: 20px;          /* Adiciona espaço interno para a lista não ficar muito grudada na borda */
-    border-radius: 10px;    /* Arredonda os cantos da borda para um visual mais suave */
-    margin: 0px 140px 20px 140px ;
+    border: 1px solid black; 
+    padding: 20px;         
+    border-radius: 10px;    
+    margin: 0px 20px 20px 20px; /* Reduzindo a margem lateral para 20px para dispositivos móveis */
 }
 
 #Futuros li {
@@ -155,6 +155,10 @@ h2 {
     .photo:hover {
         transform: translateY(-10px);
         box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    #Futuros {
+        margin: 0px 140px 20px 140px; /* Aqui restauramos a margem original para telas maiores */
     }
 
     .heart {
