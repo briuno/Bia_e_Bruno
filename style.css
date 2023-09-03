@@ -17,20 +17,20 @@ body, html {
 header {
     background: var(--primary-color);
     color: white;
-    padding: 30px 0;
+    padding: 15px 0;
     text-align: center;
     position: relative;
 }
 
 header h1 {
-    font-family: 'Dancing Script', cursive;  /* Adicionado esta linha */
-    font-size: 65px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
     margin: 0px;
 }
 
 nav a {
-    margin: 0 15px;
-    padding: 10px 20px;
+    margin: 0 5px;
+    padding: 5px 10px;
     border-radius: 25px;
     background: var(--secondary-color);
     transition: all 0.4s;
@@ -46,29 +46,28 @@ nav a:hover {
 }
 
 section {
-    padding: 25px 0;
+    padding: 15px 0;
     text-align: center;
 }
-section h1{
-    font-size: 30px;
+section h1 {
+    font-size: 24px;
 }
 
 #story .content {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 300px;  /* Considerando a largura padrão de um smartphone */
     text-align: left;
 }
 
 #photos {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 .photo {
-    width: 200px;
-    height: auto;
-    margin: 15px;
+    width: 100%;
+    margin: 0px 0;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.4s;
@@ -79,15 +78,14 @@ section h1{
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
 }
 
-h1,h2{
+h1, h2 {
     font-family: 'Playfair Display', serif;
 }
 
-
 .heart {
     position: relative;
-    width: 200px;
-    height: 180px;
+    width: 150px;
+    height: 135px;
     margin: 0 auto 20px;
     transition: all 0.4s;
 }
@@ -100,15 +98,15 @@ h1,h2{
     content: "";
     position: absolute;
     top: 0;
-    width: 104px;
-    height: 200px;
+    width: 78px;
+    height: 150px;
     border-radius: 100px 100px 0 0;
     background: var(--primary-color);
     transition: all 0.4s;
 }
 
 .heart::before {
-    left: 100px;
+    left: 75px;
     transform: rotate(-45deg);
     transform-origin: 0 100%;
 }
@@ -118,3 +116,57 @@ h1,h2{
     transform: rotate(45deg);
     transform-origin: 100% 100%;
 }
+
+/* Estilos para telas maiores */
+@media only screen and (min-width: 769px) {
+    header h1 {
+        font-size: 65px;
+    }
+
+    nav a {
+        margin: 0 15px;
+        padding: 10px 20px;
+    }
+
+    section {
+        padding: 25px 0;
+    }
+
+    section h1 {
+        font-size: 30px;
+    }
+
+    #story .content {
+        max-width: 800px;
+    }
+
+    #photos {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .photo {
+        width: 100%;
+        height: 200px;  /* Altura fixa para padronização */
+        object-fit: cover;  /* A imagem cobrirá a área sem perder proporção */
+        margin: 10px 0;
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s;
+    }
+
+    .heart {
+        width: 200px;
+        height: 180px;
+    }
+
+    .heart::before, .heart::after {
+        width: 104px;
+        height: 200px;
+    }
+
+    .heart::before {
+        left: 100px;
+    }
+}
+
