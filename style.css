@@ -9,7 +9,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #f9f9f9, #e8e8e8);
+    background: linear-gradient(135deg, white, #aaa9a9);  
     color: var(--primary-color);
     line-height: 1.6;
 }
@@ -53,6 +53,14 @@ section h1 {
     font-size: 24px;
 }
 
+footer{
+    background: var(--primary-color);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+}
+
 #story .content {
     margin: 0 auto;
     max-width: 300px;  /* Considerando a largura padrão de um smartphone */
@@ -60,8 +68,8 @@ section h1 {
 }
 
 #photos {
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     align-items: center;
 }
 
@@ -141,20 +149,24 @@ h1, h2 {
     }
 
     #photos {
-        flex-direction: row;
+        display: flex;
+        /* flex-direction: column; */
         justify-content: center;
+        flex-wrap: wrap;
+        /* padding: 0 10px;   */
     }
-
+        
     .photo {
-        width: 100%;
-        height: 200px;  /* Altura fixa para padronização */
-        object-fit: cover;  /* A imagem cobrirá a área sem perder proporção */
-        margin: 10px 0;
-        border-radius: 10px;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
-        transition: all 0.4s;
+      /* Definindo o tamanho base para 70px */
+        width: 24%;       
+        height: auto;     
+        margin: 10px;
     }
-
+    
+    .photo:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
+    }
     .heart {
         width: 200px;
         height: 180px;
