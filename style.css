@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
 
 
-*{
+* {
     list-style-type: none;
 }
+
 :root {
     --primary-color: #331fa6;
     --secondary-color: white;
@@ -95,7 +96,8 @@ footer {
 }
 
 #titulophotos h1 {
-    text-align: center; /* Isto assegura que o texto dentro do h1 também esteja centralizado. */
+    text-align: center;
+    /* Isto assegura que o texto dentro do h1 também esteja centralizado. */
 }
 
 h1,
@@ -104,15 +106,47 @@ h2 {
 }
 
 #Futuros {
-    border: 1px solid black; 
-    padding: 20px;         
-    border-radius: 10px;    
-    margin: 0px 20px 20px 20px; /* Reduzindo a margem lateral para 20px para dispositivos móveis */
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0px 20px 20px 20px;
+    /* Reduzindo a margem lateral para 20px para dispositivos móveis */
 }
 
 #Futuros li {
-    margin-bottom: 10px;    /* Adiciona um espaço entre os itens da lista */
+    margin-bottom: 10px;
+    /* Adiciona um espaço entre os itens da lista */
 }
+
+#about-us {
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.person {
+    /* max-width: 300px; */
+    margin: 20px;
+    text-align: center;
+}
+
+.person-photo {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s;
+}
+
+.person-photo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+
 
 /* Estilos para telas maiores */
 @media only screen and (min-width: 769px) {
@@ -121,8 +155,8 @@ h2 {
     }
 
     nav a {
-        margin: 0 15px;
-        padding: 10px 20px;
+        margin: 0 10px;
+        padding: 3px 8px;
     }
 
     section {
@@ -158,21 +192,31 @@ h2 {
     }
 
     #Futuros {
-        margin: 0px 140px 20px 140px; /* Aqui restauramos a margem original para telas maiores */
+        margin: 0px 140px 20px 140px;
+        /* Aqui restauramos a margem original para telas maiores */
     }
 
-    .heart {
-        width: 200px;
-        height: 180px;
+    #about-us {
+        padding: 50px 0;
+        justify-content: space-between;
     }
 
-    .heart::before,
-    .heart::after {
-        width: 104px;
-        height: 200px;
+    .person {
+        /* max-width: 400px; */
+        margin: 40px;
     }
-
-    .heart::before {
-        left: 100px;
+    
+    .person-photo {
+        max-width: 250px;
+        height: 250px;
+    }
+    .sobre h1{
+        text-align: center;
+    }
+    
+    .person p{
+        border: 1px solid black;
+        margin: 0px 200px 0px 200   px;
+        padding: 30px;
     }
 }
