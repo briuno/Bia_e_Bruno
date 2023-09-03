@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
 
+
+*{
+    list-style-type: none;
+}
 :root {
     --primary-color: #331fa6;
     --secondary-color: white;
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, white, #aaa9a9);  
+    background: linear-gradient(135deg, white, #e4e4e4);
     color: var(--primary-color);
     line-height: 1.6;
 }
@@ -49,11 +54,12 @@ section {
     padding: 15px 0;
     text-align: center;
 }
+
 section h1 {
     font-size: 24px;
 }
 
-footer{
+footer {
     background: var(--primary-color);
     color: white;
     padding: 15px 0;
@@ -63,7 +69,8 @@ footer{
 
 #story .content {
     margin: 0 auto;
-    max-width: 300px;  /* Considerando a largura padrão de um smartphone */
+    max-width: 300px;
+    /* Considerando a largura padrão de um smartphone */
     text-align: left;
 }
 
@@ -71,6 +78,7 @@ footer{
     /* display: flex; */
     /* flex-direction: column; */
     align-items: center;
+    justify-content: center;
 }
 
 .photo {
@@ -86,43 +94,24 @@ footer{
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
 }
 
-h1, h2 {
+#titulophotos h1 {
+    text-align: center; /* Isto assegura que o texto dentro do h1 também esteja centralizado. */
+}
+
+h1,
+h2 {
     font-family: 'Playfair Display', serif;
 }
 
-.heart {
-    position: relative;
-    width: 150px;
-    height: 135px;
-    margin: 0 auto 20px;
-    transition: all 0.4s;
+#Futuros {
+    border: 1px solid black; /* Isso adiciona uma borda preta de 2px */
+    padding: 20px;          /* Adiciona espaço interno para a lista não ficar muito grudada na borda */
+    border-radius: 10px;    /* Arredonda os cantos da borda para um visual mais suave */
+    margin: 0px 140px 20px 140px ;
 }
 
-.heart:hover {
-    transform: scale(1.1);
-}
-
-.heart::before, .heart::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 78px;
-    height: 150px;
-    border-radius: 100px 100px 0 0;
-    background: var(--primary-color);
-    transition: all 0.4s;
-}
-
-.heart::before {
-    left: 75px;
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
-}
-
-.heart::after {
-    left: 0;
-    transform: rotate(45deg);
-    transform-origin: 100% 100%;
+#Futuros li {
+    margin-bottom: 10px;    /* Adiciona um espaço entre os itens da lista */
 }
 
 /* Estilos para telas maiores */
@@ -155,24 +144,26 @@ h1, h2 {
         flex-wrap: wrap;
         /* padding: 0 10px;   */
     }
-        
+
     .photo {
-      /* Definindo o tamanho base para 70px */
-        width: 24%;       
-        height: auto;     
+        /* Definindo o tamanho base para 70px */
+        width: 24%;
+        height: auto;
         margin: 10px;
     }
-    
+
     .photo:hover {
         transform: translateY(-10px);
         box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
     }
+
     .heart {
         width: 200px;
         height: 180px;
     }
 
-    .heart::before, .heart::after {
+    .heart::before,
+    .heart::after {
         width: 104px;
         height: 200px;
     }
@@ -181,4 +172,3 @@ h1, h2 {
         left: 100px;
     }
 }
-
