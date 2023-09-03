@@ -1,189 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
 
 
-* {
-    list-style-type: none;
-}
+    * {
+        list-style-type: none;
+    }
 
-:root {
-    --primary-color: #331fa6;
-    --secondary-color: white;
-}
+    :root {
+        --primary-color: #331fa6;
+        --secondary-color: white;
+    }
 
-body,
-html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, white, #e4e4e4);
-    color: var(--primary-color);
-    line-height: 1.6;
-}
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        background: linear-gradient(50deg, rgb(255, 255, 255), #ffffff);
+        color: var(--primary-color);
+        line-height: 1.6;
+    }
 
-header {
-    background: var(--primary-color);
-    color: white;
-    padding: 15px 0;
-    text-align: center;
-    position: relative;
-}
-
-header h1 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 40px;
-    margin: 0px;
-}
-
-nav a {
-    margin: 0 5px;
-    padding: 5px 10px;
-    border-radius: 25px;
-    background: var(--secondary-color);
-    transition: all 0.4s;
-    display: inline-block;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    background: white;
-    color: var(--primary-color);
-    transform: scale(1.1);
-}
-
-section {
-    padding: 15px 0;
-    text-align: center;
-}
-
-section h1 {
-    font-size: 24px;
-}
-
-footer {
-    background: var(--primary-color);
-    color: white;
-    padding: 15px 0;
-    text-align: center;
-    position: relative;
-}
-
-#story .content {
-    margin: 0 auto;
-    max-width: 300px;
-    /* Considerando a largura padrão de um smartphone */
-    text-align: left;
-}
-
-#photos {
-    /* display: flex; */
-    /* flex-direction: column; */
-    align-items: center;
-    justify-content: center;
-}
-
-.photo {
-    width: 100%;
-    margin: 0px 0;
-    border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
-    transition: all 0.4s;
-}
-
-.photo:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
-}
-
-#titulophotos h1 {
-    text-align: center;
-    /* Isto assegura que o texto dentro do h1 também esteja centralizado. */
-}
-
-h1,
-h2 {
-    font-family: 'Playfair Display', serif;
-}
-
-#Futuros {
-    border: 1px solid black;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 0px 20px 20px 20px;
-    /* Reduzindo a margem lateral para 20px para dispositivos móveis */
-}
-
-#Futuros li {
-    margin-bottom: 10px;
-    /* Adiciona um espaço entre os itens da lista */
-}
-
-#about-us {
-    padding: 25px 0;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.person {
-    /* max-width: 300px; */
-    margin: 20px;
-    text-align: center;
-}
-
-.person-photo {
-    width: 100%;
-    max-width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
-    transition: all 0.4s;
-}
-
-.person-photo:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
-}
+    header {
+        background: var(--primary-color);
+        color: white;
+        padding: 15px 0;
+        text-align: center;
+    }
 
 
-
-/* Estilos para telas maiores */
-@media only screen and (min-width: 769px) {
     header h1 {
-        font-size: 65px;
+        font-family: 'Dancing Script', cursive;
+        font-size: 40px;
+        margin: 0px;
     }
 
     nav a {
-        margin: 0 10px;
-        padding: 3px 8px;
+        margin: 0 5px;
+        padding: 5px 10px;
+        border-radius: 25px;
+        background: var(--secondary-color);
+        transition: all 0.4s;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: bold;
+
+    }
+
+    nav a:hover {
+        background: white;
+        color: var(--primary-color);
+        transform: scale(1.1);
     }
 
     section {
-        padding: 25px 0;
+        padding: 15px 0;
+        text-align: center;
     }
 
     section h1 {
-        font-size: 30px;
+        font-size: 24px;
     }
 
+    footer {
+        background: var(--primary-color);
+        color: white;
+        padding: 15px 0;
+        text-align: center;
+        position: relative;
+    }
+
+    /* #story {
+        margin-top: 150px;  /* Este valor deve ser aproximadamente a altura do seu cabeçalho, para evitar que o conteúdo seja escondido atrás do cabeçalho fixo */
+
+
     #story .content {
-        max-width: 800px;
+        margin: 0 auto;
+        max-width: 300px;
+        /* Considerando a largura padrão de um smartphone */
+        text-align: left;
+        /* Este valor deve ser aproximadamente a altura do seu cabeçalho, para evitar que o conteúdo seja escondido atrás do cabeçalho fixo */
+
     }
 
     #photos {
-        display: flex;
+        /* display: flex; */
         /* flex-direction: column; */
+        align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
-        /* padding: 0 10px;   */
+
     }
 
     .photo {
-        /* Definindo o tamanho base para 70px */
-        width: 24%;
-        height: auto;
-        margin: 10px;
+        width: 100%;
+        margin: 0px 0;
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s;
     }
 
     .photo:hover {
@@ -191,32 +103,148 @@ h2 {
         box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
     }
 
+    #titulophotos h1 {
+        text-align: center;
+        /* Isto assegura que o texto dentro do h1 também esteja centralizado. */
+    }
+
+    h1,
+    h2 {
+        font-family: 'Playfair Display', serif;
+    }
+
     #Futuros {
-        margin: 0px 140px 20px 140px;
-        /* Aqui restauramos a margem original para telas maiores */
+        border: 1px solid black;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 0px 20px 20px 20px;
+        /* Reduzindo a margem lateral para 20px para dispositivos móveis */
+    }
+
+    #Futuros li {
+        margin-bottom: 10px;
+        /* Adiciona um espaço entre os itens da lista */
     }
 
     #about-us {
-        padding: 50px 0;
-        justify-content: space-between;
+        padding: 25px 0;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 
     .person {
-        /* max-width: 400px; */
-        margin: 40px;
-    }
-    
-    .person-photo {
-        max-width: 250px;
-        height: 250px;
-    }
-    .sobre h1{
+        /* max-width: 300px; */
+        margin: 20px;
         text-align: center;
     }
-    
-    .person p{
-        border: 1px solid black;
-        margin: 0px 200px 0px 200   px;
-        padding: 30px;
+
+    .person-photo {
+        width: 100%;
+        max-width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s;
+
     }
-}
+
+    .person-photo:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
+
+    }
+
+    .h1sobre {
+        text-align: center;
+    }
+
+
+
+    /* Estilos para telas maiores */
+    @media only screen and (min-width: 769px) {
+        header h1 {
+            font-size: 65px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            padding: 3px 8px;
+        }
+
+        section {
+            padding: 25px;
+        }
+
+        section h1 {
+            font-size: 30px;
+        }
+
+        #story .content {
+            max-width: 800px;
+        }
+
+        #photos {
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: center;
+            flex-wrap: wrap;
+            /* padding: 0 10px;   */
+        }
+
+        .photo {
+            /* Definindo o tamanho base para 70px */
+            width: 24%;
+            height: auto;
+            margin: 10px;
+        }
+
+        .photo:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        #Futuros {
+            margin: 0px 140px 20px 140px;
+            /* Aqui restauramos a margem original para telas maiores */
+        }
+
+        #sobre {
+            display: flex;
+            justify-content: space-between;
+            /* espaçamento entre as duas divs */
+            align-items: center;
+            /* alinhamento vertical ao centro */
+            flex-wrap: wrap;
+            /* permite que os itens se ajustem conforme o tamanho da tela */
+        }
+
+
+        .person {
+            /* max-width: 400px; */
+            /* margin: 40px; */
+            flex: 1;
+            /* cada div .person vai ocupar metade do espaço disponível */
+            margin: 0 15px;
+            /* margem lateral para evitar que as divs colidam */
+
+        }
+
+        .person-photo {
+            max-width: 250px;
+            height: 250px;
+
+        }
+
+        .person p {
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 0px 200px 0px 200 px;
+            padding: 30px;
+        }
+
+        .h1sobre {
+            text-align: center;
+        }
+    }
