@@ -64,7 +64,7 @@
     footer {
         background: var(--primary-color);
         color: white;
-        padding: 15px 0;
+        padding: 0px 0;
         text-align: center;
         position: relative;
     }
@@ -161,9 +161,10 @@
     }
 
     .social-icons {
-        margin: 20px;
+        margin: 10px;
         color: #ffffff;
         gap: 10px; /* Space between icons */
+        align-items: center;
     }
 
     .social-icons a {
@@ -171,8 +172,6 @@
         text-decoration: none;
         transition: color 0.3s;
     }
-
-
 
     /* Estilos para telas maiores */
     @media only screen and (min-width: 769px) {
@@ -232,7 +231,6 @@
             /* permite que os itens se ajustem conforme o tamanho da tela */
         }
 
-
         .person {
             /* max-width: 400px; */
             /* margin: 40px; */
@@ -262,6 +260,7 @@
 
         footer {
             display: flex;
+            margin: 0px;
             justify-content: space-between; /* This will push the icons to the edges */
             align-items: center;
         }
