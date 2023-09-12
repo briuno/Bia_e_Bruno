@@ -160,6 +160,18 @@
         text-align: center;
     }
 
+    .social-icons {
+        margin: 20px;
+        color: #ffffff;
+        gap: 10px; /* Space between icons */
+    }
+
+    .social-icons a {
+        color: white; /* Icon color */
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
 
 
     /* Estilos para telas maiores */
@@ -247,4 +259,28 @@
         .h1sobre {
             text-align: center;
         }
+
+        footer {
+            display: flex;
+            justify-content: space-between; /* This will push the icons to the edges */
+            align-items: center;
+        }
+        
+        .social-icons {
+            display: flex;
+            margin: 20px;
+            color: #ffffff;
+            gap: 10px; /* Space between icons */
+        }
+        
+        .social-icons a {
+            color: white; /* Icon color */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #ddd; /* Color change on hover */
+        }
+        
     }
