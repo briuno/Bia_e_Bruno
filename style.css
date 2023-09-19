@@ -1,8 +1,10 @@
     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
-
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
     * {
         list-style-type: none;
+        box-sizing: border-box;
+        font-weight: normal;
     }
 
     :root {
@@ -15,9 +17,10 @@
         margin: 0;
         padding: 0;
         font-family: 'Montserrat', sans-serif;
-        background: linear-gradient(50deg, rgb(255, 255, 255), #ffffff);
+        background: linear-gradient(50deg, rgb(241, 220, 220), #e2d4d4);
         color: var(--primary-color);
         line-height: 1.6;
+        text-align: center;
     }
 
     header {
@@ -69,43 +72,10 @@
         position: relative;
     }
 
-    /* #story {
-        margin-top: 150px;  /* Este valor deve ser aproximadamente a altura do seu cabeçalho, para evitar que o conteúdo seja escondido atrás do cabeçalho fixo */
-
-
     #story .content {
         margin: 0 auto;
         max-width: 300px;
-        /* Considerando a largura padrão de um smartphone */
         text-align: left;
-        /* Este valor deve ser aproximadamente a altura do seu cabeçalho, para evitar que o conteúdo seja escondido atrás do cabeçalho fixo */
-
-    }
-
-    #photos {
-        /* display: flex; */
-        /* flex-direction: column; */
-        align-items: center;
-        justify-content: center;
-
-    }
-
-    .photo {
-        width: 100%;
-        margin: 0px 0;
-        border-radius: 10px;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
-        transition: all 0.4s;
-    }
-
-    .photo:hover {
-        transform: translateY(-10px);
-        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.12);
-    }
-
-    #titulophotos h1 {
-        text-align: center;
-        /* Isto assegura que o texto dentro do h1 também esteja centralizado. */
     }
 
     h1,
@@ -118,12 +88,10 @@
         padding: 20px;
         border-radius: 10px;
         margin: 0px 20px 20px 20px;
-        /* Reduzindo a margem lateral para 20px para dispositivos móveis */
     }
 
     #Futuros li {
         margin-bottom: 10px;
-        /* Adiciona um espaço entre os itens da lista */
     }
 
     #about-us {
@@ -133,8 +101,88 @@
         flex-wrap: wrap;
     }
 
+    .h1sobre {
+        text-align: center;
+    }
+
+    .social-icons {
+        margin: 10px;
+        color: #ffffff;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .social-icons a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .flip {
+        position: relative;
+
+        >.front,
+        >.back {
+            display: block;
+            transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+            transition-duration: .5s;
+            transition-property: transform, opacity;
+        }
+
+        >.front {
+            transform: rotateY(0deg);
+        }
+
+        >.back {
+            position: absolute;
+            opacity: 0;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            transform: rotateY(-180deg);
+        }
+
+        &:hover {
+            >.front {
+                transform: rotateY(180deg);
+            }
+
+            >.back {
+                opacity: 1;
+                transform: rotateY(0deg);
+            }
+        }
+    }
+
+    .flip {
+        position: relative;
+        display: inline-block;
+        margin-right: 15px;
+        margin-bottom: 12px;
+        width: 270px;
+
+        >.front,
+        >.back {
+            display: block;
+            color: white;
+            width: inherit;
+            background-size: cover !important;
+            background-position: center !important;
+            height: 380px;
+            padding: 1em 2em;
+            background: #331fa6;
+            border-radius: 20px;
+
+            p {
+                font-size: 0.9125rem;
+                line-height: 160%;
+                color: #999;
+            }
+        }
+    }
+
     .person {
-        /* max-width: 300px; */
         margin: 20px;
         text-align: center;
     }
@@ -156,21 +204,8 @@
 
     }
 
-    .h1sobre {
-        text-align: center;
-    }
-
-    .social-icons {
-        margin: 10px;
-        color: #ffffff;
-        gap: 10px; /* Space between icons */
-        align-items: center;
-    }
-
-    .social-icons a {
-        color: white; /* Icon color */
-        text-decoration: none;
-        transition: color 0.3s;
+    .text-shadow {
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
     }
 
     /* Estilos para telas maiores */
@@ -198,14 +233,11 @@
 
         #photos {
             display: flex;
-            /* flex-direction: column; */
             justify-content: center;
             flex-wrap: wrap;
-            /* padding: 0 10px;   */
         }
 
         .photo {
-            /* Definindo o tamanho base para 70px */
             width: 24%;
             height: auto;
             margin: 10px;
@@ -218,26 +250,18 @@
 
         #Futuros {
             margin: 0px 140px 20px 140px;
-            /* Aqui restauramos a margem original para telas maiores */
         }
 
         #sobre {
             display: flex;
             justify-content: space-between;
-            /* espaçamento entre as duas divs */
             align-items: center;
-            /* alinhamento vertical ao centro */
             flex-wrap: wrap;
-            /* permite que os itens se ajustem conforme o tamanho da tela */
         }
 
         .person {
-            /* max-width: 400px; */
-            /* margin: 40px; */
             flex: 1;
-            /* cada div .person vai ocupar metade do espaço disponível */
             margin: 0 15px;
-            /* margem lateral para evitar que as divs colidam */
 
         }
 
@@ -261,25 +285,25 @@
         footer {
             display: flex;
             margin: 0px;
-            justify-content: space-between; /* This will push the icons to the edges */
+            justify-content: space-between;
             align-items: center;
         }
-        
+
         .social-icons {
             display: flex;
             margin: 20px;
             color: #ffffff;
-            gap: 10px; /* Space between icons */
+            gap: 10px;
         }
-        
+
         .social-icons a {
-            color: white; /* Icon color */
+            color: white;
             text-decoration: none;
             transition: color 0.3s;
         }
-        
+
         .social-icons a:hover {
-            color: #ddd; /* Color change on hover */
+            color: #ddd;
         }
-        
+
     }
